@@ -25,6 +25,6 @@ module.exports = (robot) ->
   robot.respond /TIME$/i, (msg) ->
     msg.send "Server time is: #{new Date()}"
     
-  robot.respond /Ari?$/i, (msg) ->
+  robot.respond /Ari(\?)$/i, (msg) ->
     msg.send "Ari."
 
