@@ -28,4 +28,4 @@ module.exports = (robot) ->
   robot.respond /Ari(\?)$/i, (msg) ->
     msg.send "Ari."
   robot.respond /Alan$/i, (msg) ->
-    setTimeout (-> msg.send "Steve!!!" for x in [1..5]), 1000
+    setTimeout (-> msg.send "Steve!!!" for x in [1..5]), 5000
