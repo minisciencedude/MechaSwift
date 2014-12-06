@@ -27,7 +27,7 @@ module.exports = (robot) ->
       imageMe msg, imagery, false, true, (url) ->
         msg.send "#{mustachify}#{url}"
 
-  robot.hear /wat/i, (msg) ->
+  robot.respond /wat/i, (msg) ->
     imageMe msg, "wat", false, (url) ->
       msg.send url
 
