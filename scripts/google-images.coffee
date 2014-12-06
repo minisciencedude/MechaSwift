@@ -6,6 +6,8 @@
 #   hubot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
 #   hubot mustache me <url> - Adds a mustache to the specified URL.
 #   hubot mustache me <query> - Searches Google Images for the specified query and mustaches it.
+#   hubot grumpy cat - Provides a grumpy cat image.
+#   hubot wat - Provides a WAT image.
 
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->
@@ -29,6 +31,10 @@ module.exports = (robot) ->
 
   robot.respond /wat/i, (msg) ->
     imageMe msg, "wat", false, (url) ->
+      msg.send url
+  
+  robot.respond /grumpy cat/i, (msg) ->
+    imageMe msg, "grumpy cat", false, (url) ->
       msg.send url
 
 imageMe = (msg, query, animated, faces, cb) ->
